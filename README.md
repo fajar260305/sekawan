@@ -1,6 +1,43 @@
 ## untuk pertama-pertama lakukan migrasi dengan seeder, lalu jalankan server dan coba login
 
-## login halaman admin :
+## set up 
+- database version
+```bash
+phpmyadmin: "5.2.0"
+```
+- PHP version
+```bash
+PHP: "8.1"
+```
+- laravel version
+```bash
+laravel: "10"
+```
+
+- set up .env
+```bash
+FILESYSTEM_DISK=public
+```
+- ketikan perintah di terminal
+```bash
+php artisan storage:link
+```
+- buat database di hpmyadmin dan set up di .env
+```bash
+DB_DATABASE=pemesanan_kendaraan
+```
+- migrate
+```bash
+php artisan migrate --seed
+```
+
+# jalankan 
+- ketikan perintah ini di terminal
+```bash
+composer update / composer install
+```
+
+# login halaman admin :
 - email
 ```bash
 admin@gmail.com
@@ -10,7 +47,7 @@ admin@gmail.com
 password
 ```
 
-## login halaman atasan :
+# login halaman atasan :
 - email
 ```bash
 fajar@gmail.com
@@ -19,22 +56,14 @@ fabian@gmail.com
 - password
 ```bash
 password
+password
 ```
 
-## dan agar gambar dapat muncul 
-ubah di .env menjadi public
+# jalankan server di terminal
+- migrate database
 ```bash
-FILESYSTEM_DISK=public
-```
-- lalu ketikan perintah di erminal
-```bash
-storage:link
+php artisan serve
 ```
 
-## Jika projek tidak bisa di nyalakan servernya / php artisan serve
-- ketikan perintah ini di terminal
-```bash
-composer update
-```
 
 
